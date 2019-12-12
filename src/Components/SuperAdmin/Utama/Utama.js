@@ -57,7 +57,7 @@ class AdminUtama extends Component {
     data.append('filename', this.fileName.value);
     console.log(this.fileName.value)
     console.log(this.state.imagePreviewUrl)
-    fetch('http://kampustelkom.herokuapp.com/api/slider', {
+    fetch('https://kampustelkom.herokuapp.com/api/slider', {
       method: 'POST',
     //   headers: {
     //     'Content-Type': 'application/x-www-form-urlencoded'
@@ -80,7 +80,7 @@ class AdminUtama extends Component {
 
 //featching API
   componentDidMount() {
-    fetch("http://kampustelkom.herokuapp.com/api/slider")
+    fetch("https://kampustelkom.herokuapp.com/api/slider")
       .then(res => res.json())
       .then(
         (result) => {
@@ -97,13 +97,13 @@ class AdminUtama extends Component {
 //Delete Function API
   deletePost = (id) => {
     console.log(id)
-    fetch(`http://kampustelkom.herokuapp.com/api/slider/${id}`, {
+    fetch(`https://kampustelkom.herokuapp.com/api/slider/${id}`, {
       method: 'DELETE'
     })
     .then(response => response.json())
     .then(json => console.log(json))
     .then = () => {
-      fetch("http://kampustelkom.herokuapp.com/api/slider")
+      fetch("https://kampustelkom.herokuapp.com/api/slider")
       .then(res => res.json())
       .then(
         (result) => {

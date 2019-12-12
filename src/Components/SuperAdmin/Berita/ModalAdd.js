@@ -56,7 +56,7 @@ class ModalAdd extends Component {
   simpanData = (event) => {
     event.preventDefault();
 
-    fetch('http://kampustelkom.herokuapp.com/api/news', {
+    fetch('https://kampustelkom.herokuapp.com/api/news', {
       method : 'POST',
       body : JSON.stringify({
         name:this.state.name,
@@ -75,7 +75,7 @@ class ModalAdd extends Component {
   }
 
   componentDidMount(){
-    fetch(`http://kampustelkom.herokuapp.com/api/news/${this.props.id}`)
+    fetch(`https://kampustelkom.herokuapp.com/api/news/${this.props.id}`)
         .then(res => res.json())
         .then(res => this.setState({
           name:res.name,

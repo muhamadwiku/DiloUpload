@@ -31,7 +31,7 @@ function reducer(state = initialState, action) {
       return { ...state, [nama]: isi };
     case SimpanPost:
         let nama2 = state.namaMahasiswa
-      fetch("http://kampustelkom.herokuapp.com/api/mahasiswa", {
+      fetch("https://kampustelkom.herokuapp.com/api/mahasiswa", {
         method: "POST",
         body: JSON.stringify({
           namaMahasiswa: nama2,
@@ -57,7 +57,7 @@ function reducer(state = initialState, action) {
 
         case SimpanKontak:
         console.log("test");  
-        fetch("http://kampustelkom.herokuapp.com/api/kontak", {
+        fetch("https://kampustelkom.herokuapp.com/api/kontak", {
             method: "POST",
             body: JSON.stringify({
               namaPengirim: state.namaPengirim,

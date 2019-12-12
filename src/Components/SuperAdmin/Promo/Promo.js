@@ -32,7 +32,7 @@ class KelolaPromo extends Component {
   }
 
   componentDidMount() {
-    fetch("http://kampustelkom.herokuapp.com/api/promo")
+    fetch("https://kampustelkom.herokuapp.com/api/promo")
       .then(res => res.json())
       .then(
         (result) => {
@@ -49,13 +49,13 @@ class KelolaPromo extends Component {
   //Delete Function API
   deletePost = (id) => {
     console.log(id)
-    fetch(`http://kampustelkom.herokuapp.com/api/promo/${id}`, {
+    fetch(`https://kampustelkom.herokuapp.com/api/promo/${id}`, {
       method: 'DELETE'
     })
     .then(response => response.json())
     .then(json => console.log(json))
 
-    .then(fetch("http://kampustelkom.herokuapp.com/api/promo"))
+    .then(fetch("https://kampustelkom.herokuapp.com/api/promo"))
       .then(res => res.json())
       .then(
         (result) => {

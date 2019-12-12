@@ -20,7 +20,7 @@ class utama extends Component {
 
 
   componentDidMount() {
-    fetch("http://kampustelkom.herokuapp.com/api/news")
+    fetch("https://kampustelkom.herokuapp.com/api/news")
       .then(res => res.json())
       .then(
         (result) => {
@@ -33,7 +33,7 @@ class utama extends Component {
         }
       )
 
-    fetch("http://kampustelkom.herokuapp.com/api/promo")
+    fetch("https://kampustelkom.herokuapp.com/api/promo")
       .then(res => res.json())
       .then(
         (result) => {
@@ -46,7 +46,7 @@ class utama extends Component {
         }
       )
 
-    fetch("http://kampustelkom.herokuapp.com/api/slider")
+    fetch("https://kampustelkom.herokuapp.com/api/slider")
       .then(res => res.json())
       .then(
         (result) => {

@@ -16,7 +16,7 @@ class Tabel extends Component {
 
     //featching API
   componentDidMount() {
-    fetch("http://kampustelkom.herokuapp.com/api/kelas")
+    fetch("https://kampustelkom.herokuapp.com/api/kelas")
       .then(res => res.json())
       .then(
         (result) => {

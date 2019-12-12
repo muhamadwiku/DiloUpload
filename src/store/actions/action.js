@@ -28,7 +28,7 @@ export const userData = (users) => {
 
 export const fetchUsers = () => {
     return dispatch => {
-        fetch("http://kampustelkom.herokuapp.com/api/mahasiswa")
+        fetch("https://kampustelkom.herokuapp.com/api/mahasiswa")
         .then(response => response.json())
         .then(json => {
             dispatch(userData(json))
@@ -48,7 +48,7 @@ export const dataKontak = (userkontak) => {
 
 export const fetchKontak = () => {
     return dispatch => {
-        fetch("http://kampustelkom.herokuapp.com/api/kontak")
+        fetch("https://kampustelkom.herokuapp.com/api/kontak")
         .then(response => response.json())
         .then(json => {
             dispatch(dataKontak(json))
@@ -68,7 +68,7 @@ export const dataJurusan = (userjurusan) => {
 
 export const fetchJurusan = () => {
     return dispatch => {
-        fetch("http://kampustelkom.herokuapp.com/api/jurusan")
+        fetch("https://kampustelkom.herokuapp.com/api/jurusan")
         .then(response => response.json())
         .then(json => {
             dispatch(dataJurusan(json))

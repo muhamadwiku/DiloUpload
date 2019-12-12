@@ -19,7 +19,7 @@ class KelolaBerita extends Component {
 
   
   componentDidMount() {
-    fetch("http://kampustelkom.herokuapp.com/api/news")
+    fetch("https://kampustelkom.herokuapp.com/api/news")
       .then(res => res.json())
       .then(
         (result) => {
@@ -36,13 +36,13 @@ class KelolaBerita extends Component {
   //Delete Function API
   deletePost = (id) => {
     console.log(id)
-    fetch(`http://kampustelkom.herokuapp.com/api/news/${id}`, {
+    fetch(`https://kampustelkom.herokuapp.com/api/news/${id}`, {
       method: 'DELETE'
     })
     .then(response => response.json())
     .then(json => console.log(json))
 
-    .then(fetch("http://kampustelkom.herokuapp.com/api/news"))
+    .then(fetch("https://kampustelkom.herokuapp.com/api/news"))
       .then(res => res.json())
       .then(
         (result) => {

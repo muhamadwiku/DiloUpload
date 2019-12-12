@@ -15,7 +15,7 @@ class berita extends Component {
   }
 
   componentDidMount() {
-    fetch("http://kampustelkom.herokuapp.com/api/news")
+    fetch("https://kampustelkom.herokuapp.com/api/news")
       .then(res => res.json())
       .then(
         (result) => {

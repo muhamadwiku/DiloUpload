@@ -13,7 +13,7 @@ class KelolaChat extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      endpoint : "http://localhost:4001",
+      endpoint : "https://localhost:4001",
 
       rooms: [],
       name: "",
@@ -50,7 +50,7 @@ class KelolaChat extends Component {
   };
 
   componentDidMount() {
-    fetch("http://beli.herokuapp.com/all-chats")
+    fetch("https://beli.herokuapp.com/all-chats")
       .then(res => res.json())
       .then(
         (result) => {

@@ -16,7 +16,7 @@ class DetilBerita extends Component {
   }
 
   componentDidMount() {
-    fetch("http://kampustelkom.herokuapp.com/api/news")
+    fetch("https://kampustelkom.herokuapp.com/api/news")
       .then(res => res.json())
       .then(
         (result) => {
@@ -32,7 +32,7 @@ class DetilBerita extends Component {
 
 
   componentWillMount() {
-    fetch(`http://kampustelkom.herokuapp.com/api/news/${this.state.id}`)
+    fetch(`https://kampustelkom.herokuapp.com/api/news/${this.state.id}`)
       .then(res => res.json())
       .then(
         (result) => {
